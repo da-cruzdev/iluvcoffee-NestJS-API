@@ -3,8 +3,14 @@ version: '3'
 services:
   db:
     image: postgres
+
+    container_name: coffee-database
+
     restart: always
+
     ports:
       - '5432:5432'
     environment:
+      POSTGRES_DB: iluvcoffee
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: pass123
